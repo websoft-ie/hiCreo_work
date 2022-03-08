@@ -1,0 +1,606 @@
+html,
+body {
+  user-select: none;
+}
+
+/*dialogConfirm001_SK_071619*/
+.dialogConfirm001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogConfirm001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogConfirm001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogConfirm001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogConfirm001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 10px 0;}
+.dialogConfirm001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogConfirm001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; color:transparent; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogConfirm001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+.dialogConfirm001 .ui-dialog-content{height:auto !important; font-size:14px; padding:0.5em 1em !important; margin:12px 0;}
+.dialogConfirm001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogConfirm001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogConfirm001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogConfirm001 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogConfirm001 .ui-button-icon-only{text-indent:0;}
+.dialogConfirm001 .ui-icon-closethick{display:none;}
+/*dialogConfirm001_SK_071619 End*/
+
+
+/*dialogConfirm002_SK_071619*/
+.dialogConfirm002{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogConfirm002 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogConfirm002 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogConfirm002 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogConfirm002 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 10px 0;}
+.dialogConfirm002 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogConfirm002 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-10px; background:none; text-indent: unset; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogConfirm002 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+.dialogConfirm002 .ui-dialog-content{height:auto !important;}
+.dialogConfirm002 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogConfirm002 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogConfirm002 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogConfirm002 input{height:auto; padding:7px 30px 7px 10px; line-height:12px; border:1px dashed #aaa; font-size:12px;}
+.dialogConfirm002 .ui-button-text-only .ui-button-text{padding:0;}
+
+
+.dialogConfirm002 .warningStyle{border: 1px solid #f00 !important; transition: border 500ms ease-out;}
+.dialogConfirm002 .warningMsg{display:none; color:#f00; font-size:10px;}
+.dialogConfirm002 .retry{font-size:10px; color:#f00;}
+/*dialogConfirm002_SK_071619 End*/
+
+/*dialogConfirm003_SK_071619*/
+.dialogConfirm003{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogConfirm003 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogConfirm003 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogConfirm003 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogConfirm003 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 10px 0;}
+.dialogConfirm003 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogConfirm003 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; text-indent: unset; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogConfirm003 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogConfirm003 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogConfirm003 .ui-dialog-content{height:auto !important; font-size:14px;}
+.dialogConfirm003 .ui-dialog-content .ment{margin-bottom:10px;}
+.dialogConfirm003 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogConfirm003 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogConfirm003 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogConfirm003 input{height:auto; padding:7px 30px 7px 10px; line-height:12px; border:1px dashed #aaa; font-size:12px;}
+.dialogConfirm003 input.inputStyleCheckbox{padding:0;}
+.dialogConfirm003 .ui-button-text-only .ui-button-text{padding:0;}
+.CourseSave.dialogConfirm003 #dialog_save_autoTime{ padding:2px 5px; -moz-appearance: textfield;}
+
+.dialogConfirm003 .warningStyle{border: 1px solid #f00 !important; transition: border 500ms ease-out;}
+.dialogConfirm003 .warningMsg{display:none; color:#f00; font-size:10px;}
+.dialogConfirm003 .retry{font-size:10px; color:#f00;}
+
+
+/*important note for save dialog 03082021SK*/
+.importantNote{position:relative; cursor:pointer; display: inline-block;}
+.importantNote:hover .noteContent{display:block;}
+.importantNote .noteTitle{font-size:12px; color:#06f; display: inline-block;}
+.importantNote .noteTitle .noteIcon{width:14px;}
+.importantNote .noteContent{display: none;    font-size: 12px;    position: absolute;    top: -40px;    left: 25px;    width: 260px;    background-color: #fff;    border: 1px solid #aaa;    padding: 5px 10px;    border-radius: 5px;    box-shadow: 0 0 5px -2px RGBA(0,0,0,0.7); z-index:2;}
+.importantNote .noteContent:before{content:""; width:0; height:0; border-left:5px solid transparent;  border-top:5px solid transparent; border-bottom:5px solid transparent; border-right:5px solid #aaa; position:absolute; top:45px; left:-11px; }
+.importantNote .noteContent:after{content:""; width:0; height:0; border-left:5px solid transparent;  border-top:5px solid transparent; border-bottom:5px solid transparent; border-right:5px solid #fff; position:absolute; top:45px; left:-9px; }
+/*important note for save dialog End 03082021SK*/
+
+/*dialogConfirm003_SK_071619 End*/
+
+/*dialogprojectBuilderTheme001_SK_071619*/
+.dialogprojectBuilderTheme001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogprojectBuilderTheme001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogprojectBuilderTheme001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogprojectBuilderTheme001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogprojectBuilderTheme001 .ui-dialog-buttonpane{border:none !important;text-align:center; margin-top:0; padding:5px 0 6px 0;}
+.dialogprojectBuilderTheme001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogprojectBuilderTheme001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogprojectBuilderTheme001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogprojectBuilderTheme001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogprojectBuilderTheme001 .ui-dialog-content{height:auto;}
+.dialogprojectBuilderTheme001 .ui-dialog-titlebar{background:#fff; border:0px solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; text-align:left; font-family:'Open Sans',Sans-Serif; font-weight:bold; background:#3f3f3f;}
+.dialogprojectBuilderTheme001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogprojectBuilderTheme001 .ui-button-text-only .ui-button-text{padding:0;}
+/*dialogprojectBuilderTheme001_SK_071619 End*/
+
+/*dialogLibrary001_SK_081419*/
+.dialogLibrary001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogLibrary001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 5px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogLibrary001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogLibrary001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogLibrary001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogLibrary001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogLibrary001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+/*3740 Harvey 20200106*/
+.dialogLibrary001 #iconFullScreen{border:0px solid #aaa; margin-top:3px; background:none; right:50px; position:absolute; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M13,2v11H2V2H13 M15,0H0v15h15V0L15,0z'/></svg>"); background-position:4px 4px;}
+.dialogLibrary001 #iconFullScreen.fullscreened{border:0px solid #aaa; margin-top:3px; background:none; right:50px; position:absolute; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M12,15H0V3h12V15z M2,13h8V5H2V13z M15,11h-2V2H4V0h11V11z'/></svg>"); background-position:4px 4px;}
+
+.dialogLibrary001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogLibrary001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogLibrary001 .ui-dialog-content{font-size:14px; padding:0.5em 1em; overflow: hidden;/*jw20190918*/}
+.dialogLibrary001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogLibrary001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogLibrary001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f !important;}
+.dialogLibrary001 .ui-button-text-only .ui-button-text{padding:0;}
+#libraryPopup {width: 100% !important;}
+#libraryPopup, .libraryPopup.dialogLibrary001{min-width:733px;}
+
+/*Library Trashcan Empty button*/
+#pnlFileList #btnEmptyTrashCan:hover{ 
+	color:#06f;
+	border: 1px solid #06f;
+}
+#pnlFileList #btnEmptyTrashCan.disabled{ 
+	opacity: 0.4;
+	cursor: default;
+}			
+/*==============================*/
+
+/*dialogLibrary001_SK_081419 End*/
+
+/*dialogRecycleBin001_SK_082019*/
+.dialogRecycleBin001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif; box-shadow: rgb(0 0 0 / 70%) 0px 0px 10px 0px;}
+.dialogRecycleBin001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogRecycleBin001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogRecycleBin001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogRecycleBin001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogRecycleBin001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogRecycleBin001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogRecycleBin001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogRecycleBin001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogRecycleBin001 .ui-dialog-content{height:auto !important; font-size:14px; padding:0px; margin:0; overflow:hidden;}
+.dialogRecycleBin001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogRecycleBin001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogRecycleBin001 .ui-dialog-titlebar{border:0 solid; /*border-bottom:1px solid #ddd;*/ padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogRecycleBin001 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogRecycleBin001 .ui-state-default .ui-icon{background:none;}
+/*.dialogRecycleBin001 button:focus{outline:none;}*/
+/*dialogRecycleBin001_SK_082019 End*/
+
+/*dialogLibraryPreview001 082319_SK*/
+.dialogLibraryPreview001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogLibraryPreview001 .ui-dialog-buttonset button{ background:#fff; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+/*.dialogLibraryPreview001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 5px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}*/
+.dialogLibraryPreview001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogLibraryPreview001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogLibraryPreview001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogLibraryPreview001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none; margin-top:-5px;}
+.dialogLibraryPreview001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogLibraryPreview001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogLibraryPreview001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogLibraryPreview001 .ui-dialog-content{height:auto !important; font-size:14px; padding:0.5em 1em; margin:0px 0;}
+.dialogLibraryPreview001 .ui-dialog-content .realvideo{background-color:#000;}
+.dialogLibraryPreview001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogLibraryPreview001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogLibraryPreview001 .ui-dialog-titlebar{border:0 solid; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogLibraryPreview001 .ui-button-text-only .ui-button-text{padding:0;}
+/*dialogLibraryPreview001 082319_SK End*/
+
+
+/*dialogSaveFileToLibrary001_SK_071619*/
+/*==========Authoring/AudioEditor/SaveDialog===========*/
+.dialogSaveFileToLibrary001{border-radius:0; padding:0; border:1px solid #666666 !important; min-height:425px; min-width:425px; overflow:hidden; font-family:'Open Sans',Sans-Serif;} 
+.dialogSaveFileToLibrary001  .ui-dialog-buttonpane .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogSaveFileToLibrary001  .ui-dialog-buttonpane .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogSaveFileToLibrary001  .ui-dialog-buttonpane .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center; width:100%;}
+.dialogSaveFileToLibrary001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:5px; padding:5px 0 6px 0;}
+.dialogSaveFileToLibrary001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; text-indent: unset; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogSaveFileToLibrary001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogSaveFileToLibrary001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogSaveFileToLibrary001 .ui-dialog-content{ font-size:11px; padding:0; min-height:354px !important;  min-width:425px; height:auto !important;}
+.dialogSaveFileToLibrary001 .ui-dialog-content .ment{margin-bottom:10px;}
+.dialogSaveFileToLibrary001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogSaveFileToLibrary001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogSaveFileToLibrary001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogSaveFileToLibrary001 input{height:auto; padding:7px 30px 7px 10px; line-height:12px; border:1px dashed #aaa; font-size:12px;}
+.dialogSaveFileToLibrary001 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogSaveFileToLibrary001 .treeWrap #directory2{ padding:10px; }
+
+/*CSS from index.css/////.toolboxSave->.dialogSaveFileToLibrary001*/
+.dialogSaveFileToLibrary001 .ui-dialog-titlebar .ui-dialog-titlebar-close {border: none;}
+.dialogSaveFileToLibrary001 .ui-dialog-buttonpane {margin-top: 0;}
+.dialogSaveFileToLibrary001 .ui-dialog-buttonpane .ui-dialog-buttonset {border: none;	margin: 0 auto;	width: 180px;float: none !important;}
+.dialogSaveFileToLibrary001 .treeWrap {float: left;width: 200px;border: 0px solid red;height: calc(100% - 103px); min-height:260px; border-right: 1px solid #ddd;}
+.dialogSaveFileToLibrary001 .treeWrap #directory2 {height: 100%; width:100%; list-style: none;overflow: auto;padding: 10px 0px 0px 0;}
+/*.dialogSaveFileToLibrary001 .treeWrap #directory2 li:hover {cursor: pointer;background-color: #e5f3ff !important;}*/
+.dialogSaveFileToLibrary001 .treeWrap #directory2 li.directory2Selected:hover,#directory2 .directory2Selected{ background-color: #cce8ff!important;}
+
+/*.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree.jstree-default .jstree-clicked{*/
+/*	background-color: transparent;*/
+/*	box-shadow: none;*/
+/*}*/
+/*.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree.jstree-default .jstree-hovered{*/
+/*	background: none;*/
+/*	border-radius: 0;*/
+/*	background-color: transparent;*/
+/*	box-shadow: none;*/
+/*}*/
+
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node>.jstree-ocl {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-open>.jstree-ocl {
+	background-image: url(../images/dir-minus.png);
+	margin-top:5px;
+}
+
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-closed>.jstree-ocl {
+	background-image: url(../images/dir-plus.png);
+	margin-top:4px;
+}
+.dialogSaveFileToLibrary001 #directory2JsTree>ul>li.jstree-node.jstree-last.jstree-closed>a.jstree-anchor i.jstree-icon.jstree-themeicon[role="presentation"],
+.dialogSaveFileToLibrary001 #directory2JsTree>ul>li.jstree-node.jstree-last.jstree-open>a.jstree-anchor i.jstree-icon.jstree-themeicon[role="presentation"],
+.dialogSaveFileToLibrary001 #directory2JsTree>ul>li>a.jstree-anchor i.jstree-icon.jstree-themeicon[role="presentation"]{
+    background-image: url(/authoring/plugins/fileman/images/library_root.png);
+    width: 20px;
+    height: 18px;
+    margin-right:5px;
+}
+
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-leaf>.jstree-ocl {
+	background-image: none;
+}
+
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node>.jstree-anchor>.jstree-themeicon {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url(../images/folder-hasItem-small.png);
+	margin-top:4px;
+}
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-closed>.jstree-anchor.jstree-clicked>.jstree-themeicon,
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-open>.jstree-anchor.jstree-clicked>.jstree-themeicon,
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-leaf>.jstree-anchor.jstree-clicked>.jstree-themeicon{
+    background-image: url(/authoring/plugins/fileman/images/file-open.png);
+}
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree .jstree-node.jstree-leaf>.jstree-anchor>.jstree-themeicon {
+	background-image: url(../images/folder-empty-small.png);
+	margin-top:4px;
+}
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree.jstree-default .jstree-icon:empty {
+	width: 16px;
+	height: 16px;
+}
+
+
+.dialogSaveFileToLibrary001 #directory {width:calc(100% - 201px) ;height: calc(100% - 103px); min-height:260px; list-style: none;padding-top: 0px;overflow: auto; padding-left: 10px; margin-bottom:0; padding-bottom:10px; min-width:293px; float:left;}
+.dialogSaveFileToLibrary001 #directory>li {padding:10px 5px 0px 5px;border-radius: 0px;border: 1px solid RGBA(0, 0, 0, 0); vertical-align:top; display: inline-block; margin: 1px;}
+.dialogSaveFileToLibrary001 #directory>li:hover {cursor: pointer;background-color: #e5f3ff;border: 1px solid RGBA(0, 0, 0, 0);box-sizing: border-box;}
+.dialogSaveFileToLibrary001 #filename {width: calc(100% - 117px);display: inline-block;}
+.dialogSaveFileToLibrary001 .fileNameLabel {display: inline-block;	margin-right: 10px; width:80px; text-align: right;}
+.dialogSaveFileToLibrary001 .fileNameWrap {display: inline-block; width: 100%;text-align: center;border-top: 1px solid #ddd; padding-top:15px; }
+.dialogSaveFileToLibrary001 #filetype {width: calc(100% - 117px); height:33px; display: inline-block;}
+.dialogSaveFileToLibrary001 .fileTypeLabel {display: inline-block;	margin-right: 10px; width:80px; text-align: right;}
+.dialogSaveFileToLibrary001 .fileTypeWrap {display: inline-block;width: 100%;text-align: center;margin-top:9px;}
+.dialogSaveFileToLibrary001 #filename:focus{box-shadow:0 0 0 0 RGBA(0,0,0,0);}
+.dialogSaveFileToLibrary001 #showPath {width: calc(100% - 117px);display: inline-block;}
+.dialogSaveFileToLibrary001 .filePathLabel {display: inline-block;	margin-right: 10px; width:80px; text-align: right;}
+.dialogSaveFileToLibrary001 .filePathWrap {display: inline-block; width: 100%;text-align: center;border-top: 1px solid #ddd; padding-top:15px; }
+/*4247_04152020SK_폴더 이름이 길어지면 X축 스크롤이 생김.*//*4258_04152020SK_Tree Css style을 Library, Question Bank와 통일*/
+.dialogSaveFileToLibrary001 .jstree-default .jstree-anchor{width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-left: 16px; margin-left: -16px;}
+.dialogSaveFileToLibrary001 .jstree-default .jstree-clicked{border-radius:0px; box-shadow:none; padding-left: 16px; margin-left: -16px;}
+.dialogSaveFileToLibrary001 .jstree-default .jstree-node{margin-left:12px;}
+
+.dialogSaveFileToLibrary001 .treeWrap #directory2JsTree.jstree-default .jstree-icon:empty{position:relative; z-index:2;}
+
+.dialogSaveFileToLibrary001 .warningStyle{border: 1px solid #f00 !important; transition: border 500ms ease-out;}
+.dialogSaveFileToLibrary001 .warningMsg{display:none; color:#f00; font-size:10px; text-align:left; width:150px; margin-left:106px;}
+.dialogSaveFileToLibrary001 .retry{font-size:10px; color:#f00;}
+/*//jw20200925 */
+.dialogSaveFileToLibrary001 #directory>li .list{    
+	width: 122px;
+    height: 135px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dialogSaveFileToLibrary001 #directory>li .list div{   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dialogSaveFileToLibrary001 #directory>li .list span{
+    position: relative;
+    bottom: -5px;
+    /* left: 8px; */
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    float: left;
+}
+/*4247_04152020SK*//*4258_04152020SK*/
+
+/*//jw20200702 */
+
+
+.dialogSaveFileToLibrary001 .videoItemWrap {
+  	height: 135px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    bottom: -27px;
+    position: relative;
+}
+.dialogSaveFileToLibrary001 .videoItemWrap .videoItemThumbWrap{
+    padding: 0 10px;
+	width: 100%;
+	height: auto;
+	position: relative;
+	bottom: 0;
+	left: 0px;
+}
+.dialogSaveFileToLibrary001 .videoItemWrap .videoItemThumbWrap:before{
+    content: '';
+    background: url(../plugins/fileman/images/videoThumbnailBg.svg);
+    background-size: 10px;
+    width: 10px;
+    height: 100%;
+    background-repeat: repeat;
+    display: block;
+    left: 10px;
+    position: absolute;
+    z-index: 2;
+    background-position:center;
+}
+
+.dialogSaveFileToLibrary001 .videoItemWrap .videoItemThumbWrap:after{
+    content: '';
+    background: url(../plugins/fileman/images/videoThumbnailBg.svg);
+    background-size: 10px;
+    width: 10px;
+    height: 100%;
+    background-repeat: repeat;
+    display: block;
+    right: 10px;
+    position: absolute;
+    z-index: 2;
+    top:0;
+    background-position:center;  
+}
+.dialogSaveFileToLibrary001 .videoItemWrap .thumb{
+  	vertical-align: middle;
+  	max-width: 100px;
+  
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;    
+}
+
+/*dialogSaveFileToLibrary001_SK_071619 End*/
+
+
+
+/*dialogFileUploader001_SK_082919*/
+
+.dialogFileUploader001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogFileUploader001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogFileUploader001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogFileUploader001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogFileUploader001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogFileUploader001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogFileUploader001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; color:transparent; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogFileUploader001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+/*.dialogFileUploader001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px;line-height:0;}*/
+.dialogFileUploader001 .ui-dialog-content{height:auto !important; font-size:14px; padding:0.5em 1em; margin:12px 0 3px 0;}
+.dialogFileUploader001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogFileUploader001 .ui-dialog-title span{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogFileUploader001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogFileUploader001 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogFileUploader001 .ui-button-icon-only{text-indent:0;}
+.dialogFileUploader001 .ui-icon-closethick{display:none;}
+
+/*dialogFileUploader001_SK_082919 End*/
+
+
+/*dialogToolbox001_SK_082919*/
+/*=============Toolbox Header=============*/
+.dialogToolbox001 {	border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogToolbox001 .ui-dialog-titlebar {	padding: 0;	display: block;	align-items: center;justify-content: center; background:#3f3f3f;}
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-title {width: 100%; height: 30px; text-align: left; font-size:14px; font-weight:bold; display: flex; align-items: center; justify-content: left; border:0px solid; border-radius: 0; color:#ddd;}
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-title img {width: 24px;height: 24px;margin-left: 10px;margin-right: 5px;vertical-align: middle;}
+/*.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-titlebar-close,*/
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-close {border: none; top: 0; right: 0; margin: 0; color: black; width: 30px; height: 30px; font-size: 16px; display: flex;	align-items: center; justify-content: center; position: absolute; cursor: pointer;}
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-close:hover{opacity:0.7;}
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-titlebar-resize {position: absolute; border: none; top: auto; right: 30px; margin: 2px 0 0 0; padding: 1px; color: black; width: 25px;	height: 25px; font-size: 14px;	display: block;	align-items: center;	justify-content: center;}
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-titlebar-resize.fullscreen_on {	background: url("../images/toolbox_fullscreen_on.svg");}
+.dialogToolbox001 .ui-dialog-titlebar .ui-dialog-titlebar-resize.fullscreen_off { background: url("../images/toolbox_fullscreen_off.svg");}
+.dialogToolbox001 .ui-dialog-content {padding: 0;	text-align: center;	overflow: hidden;}
+.dialogToolbox001 .ui-dialog-content #toolBox {	margin-bottom: 0;	border: 0px;	border-radius: 0px;}
+/*Harvey June 6 2019/2422*/
+.dialogToolbox001 .ui-dialog-content #toolBoxCode {	margin-bottom: 0;	border: 0px;	border-radius: 0px;}
+.dialogToolbox001 .ui-dialog-content #toolBoxCodeTimeline {	margin-bottom: 0;	border: 0px;	border-radius: 0px;}
+.dialogToolbox001 .ui-dialog-buttonpane {	border: none;	display: flex;	align-items: center;	justify-content: center;	border-top: 1px solid #ccc;	margin: 0 0 6px 0;	padding: 5px 0 0 5px;}
+.dialogToolbox001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnSave { background:#fff; border:1px solid #aaa;  color:#666; margin: .5em 2px;	height: 38px;	font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnSave:hover{color:#06f !important; border:1px solid #06f !important;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnSave.btnSaveOff:hover{color:#666 !important; border:1px solid #aaa !important;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnSave img {	vertical-align: middle;	width: 16px;}
+
+/*Button Editor*/
+.dialogToolbox001.buttonEditorPopup .ui-dialog-title{padding-left: 40px;  background-image: url(../images/UIIcon/A000/toolbox_title_A010.svg);  background-repeat: no-repeat; background-size:25px;background-position: 10px center;}
+
+/*dialogToolbox001_SK_082919 End*/
+
+/*//Harvey 20191007 2851, 2852, 2853*/
+.R022_A010.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnStart {background: url(../images/toolbox_webcamRecord_recordbtn.svg) no-repeat; background-size:30px; background-position:5px; border:1px solid #aaa;  color:#666; margin: .5em 2px; width:140px; height: 38px; text-align:right; font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+
+
+.R024_A010.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnStart { background:#fff; border:1px solid #aaa;  color:#666; margin: .5em 2px;width:130px;	height: 38px;	font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnPlay { background:#fff; border:1px solid #aaa;  color:#666; margin: .5em 2px;width:130px;	height: 38px;	font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnSaveVideo { background:#fff; border:1px solid #aaa;  color:#666; margin: .5em 2px;width:130px;	height: 38px;	font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnEdit { background:#fff; border:1px solid #aaa;  color:#666; margin: .5em 2px;width:130px;	height: 38px;	font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+.dialogToolbox001 .ui-dialog-buttonpane .ui-dialog-buttonset .btnCapture { background:#fff; border:1px solid #aaa;  color:#666; margin: .5em 2px;width:130px;	height: 38px;	font-size: 14px;	border: 1px solid #aaa; border-radius:0;}
+/*//Harvey 20191007 2851, 2852, 2853 End*/
+
+/*dialogPageProperties001_SK_082919*/
+.dialogPageProperties001{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogPageProperties001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogPageProperties001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogPageProperties001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogPageProperties001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogPageProperties001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogPageProperties001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; color:transparent; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>") !important; background-position:4px 4px !important;}
+.dialogPageProperties001 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+.dialogPageProperties001 .ui-dialog-content{ font-size:14px; margin:0; padding:0; overflow-x: hidden;}
+.dialogPageProperties001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogPageProperties001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogPageProperties001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogPageProperties001 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogPageProperties001 .ui-button-icon-only{text-indent:0;}
+.dialogPageProperties001 .ui-icon-closethick{display:none;}
+
+/*.pageproperties_editor {font-family: 'Open Sans', Sans-Serif;}*/
+/*.pageproperties_editor {padding: 0;}*/
+/*.pageproperties_editor .ui-dialog-titlebar {padding: 5px 10px;background-color: #fff;color: #06f;border-bottom: 1px solid #ccc;border-bottom-right-radius: 0;border-bottom-left-radius: 0;}*/
+/*.pageproperties_editor .ui-dialog-titlebar .ui-dialog-title {text-align: left;width: 100%;border: 0px solid;}*/
+/*.pageproperties_editor .ui-dialog-titlebar .ui-dialog-titlebar-close {border: none;background: none;}*/
+/*.pageproperties_editor .ui-dialog-content {padding: 0;}*/
+
+
+/*dialogPageProperties001_SK_082919 End*/
+
+
+/*dialogTemplatePreview001 090319_SK*/
+.dialogTemplatePreview001{border-radius:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogTemplatePreview001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogTemplatePreview001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogTemplatePreview001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogTemplatePreview001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogTemplatePreview001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogTemplatePreview001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogTemplatePreview001 .ui-dialog-titlebar-close:hover{opacity:0.7; cursor:pointer;}
+/*.dialogTemplatePreview001 .ui-dialog-titlebar-close:before{content:"✕"; color:#666; font-size:18px; line-height:22px;}*/
+.dialogTemplatePreview001 .ui-dialog-content{font-size:14px; padding:0.5em 1em; margin:0px 0;}
+.dialogTemplatePreview001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogTemplatePreview001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogTemplatePreview001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogTemplatePreview001 .ui-button-text-only .ui-button-text{padding:0;}
+/*dialogTemplatePreview001 090319_SK End*/
+
+
+/*.DialogEmailConfirmation001_SK_071619*/
+.DialogEmailConfirmation001{border-radius:0; padding:0; border:0 solid #c5c5c5;  box-shadow:0 10px 10px -3px RGBA(0,0,0,0.7); font-family:'Open Sans',Sans-Serif;}
+.DialogEmailConfirmation001 .ui-dialog-content{height:auto !important; font-size:14px;}
+/*.DialogEmailConfirmation001_SK_071619 End*/
+
+/*.dialogfileUploader001_SK_04222020*/
+
+.dialogFileUploader002{border-radius:0; padding:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif;}
+.dialogFileUploader002 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogFileUploader002 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogFileUploader002 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogFileUploader002 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:5px 0 15px 0;}
+.dialogFileUploader002 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogFileUploader002 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; color:transparent; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogFileUploader002 .ui-dialog-titlebar-close:hover{opacity:0.7;}
+.dialogFileUploader002 .ui-dialog-content{height:auto !important; font-size:14px; padding:0.5em 1em !important; margin:12px 0;}
+.dialogFileUploader002 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogFileUploader002 .ui-dialog-title{font-size:14px;  color:#ddd; font-weight:bold;}
+.dialogFileUploader002 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogFileUploader002 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogFileUploader002 .ui-button-icon-only{text-indent:0;}
+.dialogFileUploader002 .ui-icon-closethick{display:none;}
+.dialogFileUploader002 .ui-dialog-close{color:#ddd;}
+
+/***Audio Editor***/
+
+.dialogFileUploader002 .audio_preloader_inner{ width: calc(100% - 30px); padding: 0 15px; }
+.dialogFileUploader002 .audio_preloader_caption{ width: 100%; text-align: center;}
+.dialogFileUploader002 .audio_preloader_progress_wrap{width: 100%; height: 22px; top: 45px; border-radius: 0px; background-color: #ddd; border: 1px solid #aaa;}
+.dialogFileUploader002 .progress{position: absolute; width: 0; height: 22px; }
+
+/****upload*****/
+.dialogFileUploader002 #uploadingInner{ width: calc(100% - 30px); padding: 0 15px; }
+.dialogFileUploader002 #uploadingCaption{ width: 100%; text-align: center;}
+.dialogFileUploader002 #uploadingProgressWrap{width: 100%; height: 22px; top: 45px; border-radius: 0px; background-color: #ddd; border: 1px solid #aaa;}
+/****publish*****/
+.dialogFileUploader002 #publishingInner{ width: calc(100% - 30px); padding: 0 15px; }
+.dialogFileUploader002 #publishingCaption{ width: 100%; text-align: center;}
+.dialogFileUploader002 #publishingProgressWrap{width: 100%; height: 22px; top: 45px; border-radius: 0px; background-color: #ddd; border: 1px solid #aaa;}
+
+.dialogFileUploader002 #progress{position: absolute; width: 0; height: 22px; }
+.dialogFileUploader002 #progressBackground{	position: absolute;	width: 0;	height: 20px;	color: #fff;	background-color: #0275d8;	/*background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);*/	background-size: 1rem 1rem;	text-align: center;	padding-top: 2px;	font-size: 12px; padding-left:5px;}
+.dialogFileUploader002 #progressBar{overflow:hidden;}
+
+
+/*.dialogfileUploader001_SK_04222020 End*/
+
+
+/* course-template-preview SK_04222020 */
+
+.dialogCourseTemplatePreview001{border-radius:0; border:1px solid #666666 !important; font-family:'Open Sans',Sans-Serif; padding:0;}
+.dialogCourseTemplatePreview001 .ui-dialog-buttonset button{ background:#fff; border:1px solid #aaa; padding: 10px 20px; color:#666; margin:0 2px !important; display:inline-block; font-size:12px; border-radius:0;}
+.dialogCourseTemplatePreview001 .ui-dialog-buttonset button:hover{color:#06f; border:1px solid #06f;}
+.dialogCourseTemplatePreview001 .ui-dialog-buttonset{float:none !important; margin:0 auto; text-align:center;}
+.dialogCourseTemplatePreview001 .ui-dialog-buttonpane{border:none !important; text-align:center; margin-top:0; padding:10px 0 15px 0;}
+.dialogCourseTemplatePreview001 .ui-dialog-buttonpane .ui-dialog-buttonset{float:none;}
+.dialogCourseTemplatePreview001 .ui-dialog-titlebar-close{border:0px solid #aaa; margin-top:-11px; background:none; right:10px; width:23px; height:23px; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='23' height='23'><path style='fill:%23dddddd;' d='M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z'/></svg>"); background-position:4px 4px;}
+.dialogCourseTemplatePreview001 .ui-dialog-titlebar-close:hover{opacity:0.7; cursor:pointer;}
+.dialogCourseTemplatePreview001 .ui-dialog-content{font-size:14px; padding:0.5em 1em; margin:0px 0;}
+.dialogCourseTemplatePreview001 .ui-button-icon-primary.ui-icon.ui-icon-closethick{background:none;}
+.dialogCourseTemplatePreview001 .ui-draggable .ui-dialog-titlebar{background:#fff; border:0px solid;}
+.dialogCourseTemplatePreview001 .ui-dialog-title{font-size:14px; color:#ddd; font-weight:bold;}
+.dialogCourseTemplatePreview001 .ui-dialog-titlebar{border:0 solid; border-bottom:1px solid #ddd; padding: .4em 1em; border-radius: 0; background:#3f3f3f;}
+.dialogCourseTemplatePreview001 .ui-button-text-only .ui-button-text{padding:0;}
+.dialogCourseTemplatePreview001 .glider-dot.active{background:#0066ff;}
+/* course-template-preview SK_04222020 End*/
+
+.ui-dialog-titlebar-close span.ui-button-text{display:none !important;}/*Remove "Close" text from .ui-dialog-titlebar-close_SK*/
+input:focus, a:focus, button:focus, textarea:focus, select:focus {outline: 0px auto -webkit-focus-ring-color !important;}
+div.dropdown:focus{outline: 0px auto -webkit-focus-ring-color !important;}
+
+/*jw20190917 libraryPopup*/
+.ui-widget.libraryPopup.ui-widget-content{
+	border: 0px;
+}
+
+.ui-dialog.libraryPopup .ui-resizable-n {
+	height: 4px;
+	top: 0;
+}
+.ui-dialog.libraryPopup .ui-resizable-e {
+	width: 5px;
+	right: -4px; /*jw20200123 3852*/
+}
+.ui-dialog.libraryPopup .ui-resizable-s {
+	height: 4px;
+	bottom: 0;
+}
+.ui-dialog.libraryPopup .ui-resizable-w {
+	width: 3px;
+	left: 0;
+}
+.ui-dialog.libraryPopup .ui-resizable-se,
+.ui-dialog.libraryPopup .ui-resizable-sw,
+.ui-dialog.libraryPopup .ui-resizable-ne,
+.ui-dialog.libraryPopup .ui-resizable-nw {
+	width: 7px;
+	height: 7px;
+}
+.ui-dialog.libraryPopup .ui-resizable-se {
+	right: 0;
+	bottom: 0;
+}
+.ui-dialog.libraryPopup .ui-resizable-sw {
+	left: 0;
+	bottom: 0;
+}
+.ui-dialog.libraryPopup .ui-resizable-ne {
+	right: 0;
+	top: 0;
+}
+.ui-dialog.libraryPopup .ui-resizable-nw {
+	left: 0;
+	top: 0;
+}
+
+
+/*Focuss button 112519_SK*/
+.ui-dialog .ui-state-focus, .dialogConfirm001.ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset button:focus{ color:#06f !important; border:1px solid #06f !important;}
+.ui-dialog.dialogRecycleBin001 .ui-dialog-titlebar .ui-state-focus, .ui-dialog.dialogConfirm002 .ui-dialog-titlebar .ui-state-focus{color:#666 !important; border:0px solid transparent !important;}
+.ui-dialog .ui-state-focus span{color:#06f !important;}
+/*Focuss button End 112519_SK*/
+

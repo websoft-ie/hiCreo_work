@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <title>Image Editor</title>
+  <link rel="icon" href="./imgs/logo-1.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://developer.snapappointments.com/bootstrap-select/A.ajax,,_libs,,_highlight.js,,_9.15.6,,_css,,_github.min.css+css,,_base.css+css,,_custom.css+dist,,_css,,_bootstrap-select.min.css,Mcc.Sm_E229yq5.css.pagespeed.cf.6VwF0Af9hv.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript" src="./js/transform.js"></script>
+  <script type="text/javascript" src="./js/maskprocess.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/magicwand.js"></script>
+
+  <style>
+    body {
+      -ms-overflow-style: none;
+      /* for Internet Explorer, Edge */
+      scrollbar-width: none;
+      /* for Firefox */
+      /* overflow-y: scroll;  */
+    }
+    
+    body::-webkit-scrollbar {
+      display: none;
+      /* for Chrome, Safari, and Opera */
+    }
+    
+    body {
+      padding-top: 0px;
+      background-color: rgb(37, 37, 37);
+      cursor: url(cursor/temp.png) 4 12;
+    }
+    
+    #tool-area {
+      padding: 10px 20px;
+      /* background-color: rgb(35, 35, 35); */
+      background: linear-gradient(to bottom, #595959 0%, #626262 3%, #575757 7%, #3c3c3c 90%, #3a3a3a 97%, #2e2e2e 100%)
+    }
+    
+    label {
+      margin-left: 10px;
+      color: white;
+    }
+    
+    .form-control {
+      display: initial;
+    }
+    
+    .bootstrap-select {
+      width: 140px !important;
+    }
+    
+    #workspaceContainerDiv {
+      width: 100%;
+      height: auto;
+      /* overflow: auto; */
+      background-color: rgb(26, 26, 26);
+    }
+    
+    #editor-region {
+      position: relative;
+      z-index: -9999;
+      margin: auto;
+      background-image: url('./imgs/transparent-tile-light.jpg');
+      background-color: transparent;
+      box-shadow: rgb(0 0 0 / 30%) 5px 5px 5px;
+    }
+    
+    .canvas {
+      position: absolute;
+    }
+    
+    .canvas:hover {
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE10+ */
+      /* Not implemented yet */
+      -o-user-select: none;
+      user-select: none;
+    }
+    
+    .responsive {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    #file-upload {
+      display: none;
+    }
+    
+    .tool-summary {
+      text-align: left;
+      line-height: 24px;
+      margin: auto;
+      padding: 15px;
+      width: 90%;
+      color: #e2e2e2;
+    }
+    
+    .responsive-1 {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+    
+    .center {
+      position: absolute;
+      /* top: 50%;
+			left: 50%; 
+			transform: translate(-50%, -50%); */
+    }
+    
+    parent {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="tool-area">
+    <div>
+      <button type="button" class="btn btn-secondary" onclick="uploadClick()">Upload image</button>
+      <button type="button" class="btn btn-secondary" id="btn-reset" onclick="onClear()">Reset/Clear</button>
+      <input id="file-upload" type="file" accept="image/*" />
+
+      <label>Tool</label>
+      <select data-style="btn-secondary" data-size="6" class="selectpicker" id="tool-select" onchange="OnChangeTool()">
+        <option value="Move">Move</option>
+        <option value="Eraser" selected>Eraser</option>
+        <option value="Lasso">Polygon Lasso</option>
+        <option value="MagicWand">Magic Wand</option>
+        <option value="Rectangle">Rectangle</option>
+        <option value="Ellipse">Ellipse</option>
+      </select>
+      <label>Selection</label>
+      <select data-style="btn-secondary" data-size="4" class="selectpicker" id="selection-mode" onchange="OnChangeSelection();">
+        <option value="New">New</option>
+        <option value="Add">Add</option>
+        <option value="Subtract">Subtract</option>
+        <option value="Intersect">Intersect</option>
+      </select>
+      <label>Tolerance: </label>
+      <input id="tolerance" class="form-control" type="NUMBER" MIN="1" MAX="255" STEP="1" VALUE="10" SIZE="10" style="width: 60px; margin-right: 10px;" />
+      <label>Size: </label>
+      <input id="size" class="form-control" type="NUMBER" MIN="1" MAX="1000" STEP="1" VALUE="10" SIZE="10" style="width: 60px; margin-right: 10px;" />
+      <label>Feather: </label>
+      <input id="feather" class="form-control" type="NUMBER" MIN="0" MAX="100" STEP="1" VALUE="0" SIZE="0" style="width: 60px; margin-right: 10px;" />
+      <a id="download" download="result.png" href="" onclick="download_img(this);" style="float: right; padding-top: 10px;">Download</a>
+    </div>
+  </div>
+  <div id='workspaceContainerDiv'>
+    <div style="position: absolute; width: 100%;height: 100%; padding: 20px 30px;">
+      <div id="editor-region" class="">
+        <!-- <img id="display-image" class="picture" src="data:image/jpeg;base64,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"/> -->
+        <!-- <img id="display-image" class="responsive" src="https://raw.githubusercontent.com/solodev/image-filling-page-margins/master/images/image.jpg"/> -->
+        <img id="display-image" class="responsive" />
+        <!-- <img id="display-image" class="responsive-1 center" src="http://placekitten.com/800/600"> -->
+      </div>
+    </div>
+    <canvas class="canvas" id="borderCanvas" unselectable="on" style="z-index: 110;">broswer don't support canvas</canvas>
+    <canvas class="canvas" id="selectionCanvas" unselectable="on" style="z-index: 110;">broswer don't support canvas</canvas>
+    <canvas class="canvas" id="toolDrawCanvas" unselectable="on" style="z-index: 100;">broswer don't support canvas</canvas>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://developer.snapappointments.com/bootstrap-select/ajax/libs/highlight.js/9.15.6/js/highlight.pack.js.pagespeed.jm.dO4qkBpHzz.js"></script>
+  <script src="https://developer.snapappointments.com/bootstrap-select/dist,_js,_bootstrap-select.min.js+search,_main.js+js,_base.js.pagespeed.jc.TbEa0Z3RJi.js"></script>
+  <script>
+    eval(mod_pagespeed_2HaUiZdTC$);
+  </script>
+</body>
+
+</html>

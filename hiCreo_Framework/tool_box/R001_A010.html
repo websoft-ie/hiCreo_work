@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="x-ua-compatible" content="IE=8,10,11,12">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+  <meta name="language" content="en">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <title>hiCreo | All-in-one authoring &amp; publishing platform</title>
+  <link rel="icon" href="./imgs/logo-1.png">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://developer.snapappointments.com/bootstrap-select/A.ajax,,_libs,,_highlight.js,,_9.15.6,,_css,,_github.min.css+css,,_base.css+css,,_custom.css+dist,,_css,,_bootstrap-select.min.css,Mcc.Sm_E229yq5.css.pagespeed.cf.6VwF0Af9hv.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    body {
+      -ms-overflow-style: none;
+      /* for Internet Explorer, Edge */
+      scrollbar-width: none;
+      /* for Firefox */
+      /* overflow-y: scroll;  */
+    }
+    
+    body::-webkit-scrollbar {
+      display: none;
+      /* for Chrome, Safari, and Opera */
+    }
+    
+    body {
+      padding-top: 0px;
+      /* background-color: rgb(37, 37, 37); */
+      cursor: url(cursor/temp.png) 4 12;
+    }
+    
+    #dialog-imageEditor {
+      padding: 10px 20px;
+      /* background-color: rgb(35, 35, 35); */
+      /* background: linear-gradient(to bottom, #595959 0%, #626262 3%, #575757 7%, #3c3c3c 90%, #3a3a3a 97%, #2e2e2e 100%) */
+    }
+    
+    label {
+      margin-left: 10px;
+      /* color: white; */
+    }
+    
+    .form-control {
+      display: initial;
+    }
+    /* .btn:focus,
+    .btn:active {
+      outline: none !important;
+      box-shadow: none !important;
+    } */
+    
+    .bootstrap-select {
+      width: 140px !important;
+    }
+    
+    #workspaceContainerDiv {
+      width: 100%;
+      height: auto;
+      /* overflow: auto; */
+      background-color: rgb(26, 26, 26);
+    }
+    
+    #editor-region {
+      position: relative;
+      z-index: -9999;
+      margin: auto;
+      background-image: url('./imgs/transparent-tile-light.jpg');
+      background-color: transparent;
+      box-shadow: rgb(0 0 0 / 30%) 5px 5px 5px;
+    }
+    
+    .canvas {
+      position: absolute;
+    }
+    
+    .canvas:hover {
+      -webkit-user-select: none;
+      /* Chrome/Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* IE10+ */
+      /* Not implemented yet */
+      -o-user-select: none;
+      user-select: none;
+    }
+    
+    .responsive {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    
+    #file-upload {
+      display: none;
+    }
+    
+    .tool-summary {
+      text-align: left;
+      line-height: 24px;
+      margin: auto;
+      padding: 15px;
+      width: 90%;
+      color: #e2e2e2;
+    }
+    
+    .responsive-1 {
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+    }
+    
+    .center {
+      position: absolute;
+      /* top: 50%;
+			left: 50%; 
+			transform: translate(-50%, -50%); */
+    }
+    
+    parent {
+      position: relative;
+    }
+    
+    .row {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="dialog-imageEditor" style="height:50px; ">
+    <div>
+      <!-- <button type="button" class="btn btn-secondary" id="btn-reset" onclick="onClear()">Reset/Clear</button> -->
+      <div class="row">
+        <label class="col-3" style="padding-left: 0; padding-top: 5px;">Tool</label>
+        <select data-style="btn-light btn-outline-secondary" data-size="6" class="selectpicker" id="tool-select" onchange="OnChangeTool()">
+          <option value="Move" hidden>Move</option>
+          <option value="Eraser" selected>Eraser</option>
+          <option value="Lasso">Polygon Lasso</option>
+          <option value="MagicWand">Magic Wand</option>
+          <option value="Rectangle">Rectangle</option>
+          <option value="Ellipse">Ellipse</option>
+        </select>
+      </div>
+      <div class="row">
+        <label class="col-3" style="padding-left: 0; padding-top: 5px;">Selection</label>
+        <select data-style="btn-light btn-outline-secondary" data-size="4" class="selectpicker" id="selection-mode" onchange="OnChangeSelection();">
+          <option value="New">New</option>
+          <option value="Add">Add</option>
+          <option value="Subtract">Subtract</option>
+          <option value="Intersect">Intersect</option>
+        </select>
+      </div>
+      <div class="row">
+        <label class="col-3" style="padding-left: 0; padding-top: 5px;">Tolerance: </label>
+        <input id="tolerance" class="col-8 form-control" type="NUMBER" MIN="1" MAX="255" STEP="1" VALUE="10" SIZE="10" disabled/>
+      </div>
+      <div class="row">
+        <label class="col-3" style="padding-left: 0; padding-top: 5px;">Size: </label>
+        <input id="size" name="size" class="col-8 form-control" type="NUMBER" MIN="1" MAX="1000" STEP="1" VALUE="10" SIZE="10" />
+      </div>
+      <div class="row">
+        <label class="col-3" style="padding-left: 0; padding-top: 5px;">Feather: </label>
+        <input id="feather" class="col-8 form-control" type="NUMBER" MIN="0" MAX="100" STEP="1" VALUE="0" SIZE="0" />
+      </div>
+      <div style="float: right; margin-top: 10px;">
+        <button type="button" class="btn btn-light btn-outline-secondary" onclick="onClear()">Reset/Clear</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://developer.snapappointments.com/bootstrap-select/ajax/libs/highlight.js/9.15.6/js/highlight.pack.js.pagespeed.jm.dO4qkBpHzz.js"></script>
+  <script src="https://developer.snapappointments.com/bootstrap-select/dist,_js,_bootstrap-select.min.js+search,_main.js+js,_base.js.pagespeed.jc.TbEa0Z3RJi.js"></script>
+  <script>
+    eval(mod_pagespeed_2HaUiZdTC$);
+
+    $('input[name=size]').keyup(function() {
+      const _sizeVal = $("#size").val()
+      const _feather = $("#feather").val()
+      const _tolerance = $("#tolerance").val()
+      window.parent.$("#Stage")[0].contentWindow.OnValueChanged(_sizeVal, _feather, _tolerance)
+    })
+
+    $("#tolerance").keyup(function() {
+      const _sizeVal = $("#size").val()
+      const _feather = $("#feather").val()
+      const _tolerance = $("#tolerance").val()
+      window.parent.$("#Stage")[0].contentWindow.OnValueChanged(_sizeVal, _feather, _tolerance)
+    })
+
+    $("#feather").keyup(function() {
+      const _sizeVal = $("#size").val()
+      const _feather = $("#feather").val()
+      const _tolerance = $("#tolerance").val()
+        // alert(_feather)
+      window.parent.$("#Stage")[0].contentWindow.OnValueChanged(_sizeVal, _feather, _tolerance)
+    })
+
+    function OnChangeTool() {
+      const ToolMode = document.getElementById('tool-select').value
+      if (ToolMode == 'Move') {
+        document.getElementById('tolerance').disabled = true
+        document.getElementById('size').disabled = true
+        document.getElementById('feather').disabled = true
+      } else if (ToolMode == 'Eraser') {
+        document.getElementById('tolerance').disabled = true
+        document.getElementById('size').disabled = false
+        document.getElementById('feather').disabled = false
+      } else if (ToolMode == 'Lasso') {
+        document.getElementById('tolerance').disabled = true
+        document.getElementById('size').disabled = true
+        document.getElementById('feather').disabled = false
+      } else if (ToolMode == 'MagicWand') {
+        document.getElementById('tolerance').disabled = false
+        document.getElementById('size').disabled = true
+        document.getElementById('feather').disabled = false
+      } else if (ToolMode == 'Rectangle' || ToolMode == 'Ellipse') {
+        document.getElementById('tolerance').disabled = true
+        document.getElementById('size').disabled = true
+        document.getElementById('feather').disabled = false
+      }
+      window.parent.$("#Stage")[0].contentWindow.OnChangeTool(ToolMode)
+    }
+
+    function OnChangeSelection() {
+      const SelectionMode = document.getElementById('selection-mode').value
+      window.parent.$("#Stage")[0].contentWindow.OnChangeSelection(SelectionMode)
+    }
+
+    function onClear() {
+      window.parent.$("#Stage")[0].contentWindow.Reset()
+    }
+  </script>
+</body>
+
+</html>

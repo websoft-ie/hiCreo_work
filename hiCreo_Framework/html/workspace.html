@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html itemscope="" lang="en" style="background-color: rgb(78, 78, 78);">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>hiCreo</title>
+  <script src="../js/jquery.min.js" type="text/javascript"></script>
+  <!--//jw20181009 1.12 => 2.2.4-->
+  <script src="../js/jquery-ui.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/input_style.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../css/main_controller.css">
+  <link rel="stylesheet" type="text/css" media="all" href="../css/workspace.css">
+  <script type="text/javascript" src="../js/transform.js"></script>
+  <script type="text/javascript" src="../js/magicwand.js"></script>
+  <script type="text/javascript" src="../js/workspace.js"></script>
+  <script type="text/javascript">
+    // const ResizeObserver = (event) => {
+
+    //   const _htmlSize = {
+    //     width: $('html').width(),
+    //     height: $('html').height()
+    //   }
+    //   const error = 90
+    //   const _themeSize = {
+    //     width: $('#themeLayout').width(),
+    //     height: $('#themeLayout').height()
+    //   }
+    //   const _themePositionByObjs = {
+    //     left: 0,
+    //     top: 0,
+    //     right: 0,
+    //     bottom: 0
+    //   }
+    //   const _scale = Math.min(
+    //     (_htmlSize.width - error) /
+    //     (_themeSize.width +
+    //       Math.max(_themePositionByObjs.left, _themePositionByObjs.right) * 2),
+    //     (_htmlSize.height - error) /
+    //     (_themeSize.height +
+    //       Math.max(_themePositionByObjs.top, _themePositionByObjs.bottom) * 2)
+    //   ).toFixed(2)
+    //   console.log($("#image_1633619122581")[0].clientWidth * _scale)
+    //   $('#themeLayout').css(
+    //     'transform',
+    //     'scale(' + _scale + ', ' + _scale + ')'
+    //   )
+    //   $('.lsPage').css(
+    //     'transform',
+    //     'scale(' + _scale + ', ' + _scale + ')'
+    //   )
+    //   const _rulerSize = 0
+    //   const _pageOffset = {
+    //     left: Math.round(
+    //       $('html').width() / 2 - ($('#themeLayout').width() * _scale) / 2 + _rulerSize / 2
+    //     ),
+    //     top: Math.round(
+    //       $('html').height() / 2 - ($('#themeLayout').height() * _scale) / 2 + _rulerSize / 2
+    //     )
+    //   }
+
+    //   $('#themeLayout').offset({
+    //     left: _pageOffset.left + 1 * _scale,
+    //     top: _pageOffset.top + 1 * _scale
+    //   })
+    //   $('.lsPage').offset({
+    //     left: _pageOffset.left + 1 * _scale,
+    //     top: _pageOffset.top + 1 * _scale
+    //   })
+    // }
+
+    // window.addEventListener('load', ResizeObserver);
+    // window.addEventListener('resize', ResizeObserver);
+
+    // window.onload = function() {
+    //   $(".editable_item").on('click', function(event) {
+    //     const _id = event.currentTarget.id
+    //     if (_id === 'obj_1633619122581' || _id === 'obj_1633620372169') {
+    //       window.parent.imageEditor(event.currentTarget)
+    //     }
+    //   });
+    // };
+  </script>
+</head>
+
+<body style="width: 100%; height: 100%;">
+  <div id="themeLayout" style="width: 1280px; height: 720px; top: -8.42811px; left: -45.8507px;">
+    <div id="btnPageProperties"><img src="../images/page_properties_setting.svg"></div>
+    <div id="layerIcon"></div>
+
+    <div class="stage unselectable" tabindex="2" style="width: 1280px; height: 720px;">
+      <lspageblockforstandalone></lspageblockforstandalone>
+    </div>
+    <div id="controller_block_id" class="controller_block" responsive-case-number="4" style="width: 1280px;">
+      <div class="footer_middle">
+        <div class="controller_cell_1">
+          <div class="cell playBtn">
+            <div class="mainController-playpause no_outline" style="width:44px; height:44px;" tabindex="10000" title="MainController Play/Pause"><img id="play" src="../images/play.svg"> <img id="pause" src="../images/pause.svg" style="display:none;"></div>
+          </div>
+          <div class="cell seekBar">
+            <div class="row">
+              <div class="mainController-bar">
+                <div class="mainController-bar-bg"></div>
+                <div class="mainController-bar-played" style="width: 0%;"></div>
+                <div class="mainController-bar-handle no_outline" tabindex="10001" title="MainController Handle" style="left: 0px;"><img src="../images/handle.svg" draggable="false"></div>
+                <div class="mainController-bar-controller"></div>
+              </div>
+            </div>
+            <div class="row" style="margin-top:2px;">
+              <div class="cell" style="width: 50%;">
+                <div class="mainController-time-current">00:00.0</div>
+              </div>
+              <div class="cell" style="width: 50%;">
+                <div class="mainController-time-duration">00:00.1</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controller_cell_2 volumeWrap">
+          <div class="cell volumeIcon" style="width: 30px;">
+            <div class="mainController-volume-button" tabindex="10002" title="Volume"><img id="volume" src="../images/volume.svg"> <img id="mute" src="../images/mute.svg" style="display:none;"></div>
+          </div>
+          <div class="cell volumeSlider">
+            <div class="mainController-volume">
+              <div class="mainController-volume-bg"></div>
+              <div class="mainController-volume-adjust" style="width: 100%;"></div>
+              <div class="mainController-volume-handle no_outline" tabindex="10003" title="Volume Handle" style="left: 70px;"><img src="../images/handle.svg"></div>
+              <div class="mainController-volume-controller"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="lsContainer" style="width:100%;height:100%;border:0px solid #000;" class="ui-selectable">
+
+    <div id="lsPage_57b8ee70T0c05T11ecT981bTf1d43df5f1c3" class="lsPage" style="background-size: cover; background-color: rgb(255, 255, 255); background-repeat: no-repeat; width: 1280px; height: 720px; top: -3.15937px; left: -44.8507px;" loaded="true">
+      <layer id="layer_main" class="layer" role="main">
+        <div time_start="0" time_end="100" class="editable_item" role="R001" id="obj_1633619122581" name="bmw-1313343_1280.jpg" style="position: absolute; float: left; width: 471.596px; height: 265.275px; left: 674.027px; top: 57.4095px; padding: 0px; margin: 0px; font-size: 0px; z-index: 3;">
+          <div class="imageWrap" style="width: 100%; height: 100%; top: 0px; left: 0px; position: absolute; box-sizing: border-box; border-radius: 0px; border-width: 0px; border-style: solid; border-color: rgb(0, 0, 0); padding: 0px;">
+            <img src="../content/files/2.jpg" id="image_1633619122581" draggable="false" style="border: none; width: 100%; height: 100%; box-sizing: border-box; transform: scale(1, 1); border-radius: 0px;" _custom="{&#39;border&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;radiusLT&#39;:0,&#39;radiusRT&#39;:0,&#39;radiusLB&#39;:0,&#39;radiusRB&#39;:0,&#39;radiusUnit&#39;:&#39;px&#39;,&#39;width&#39;:0,&#39;color&#39;:&#39;rgb(0,0,0)&#39;,&#39;padding&#39;:0,&#39;paddingColor&#39;:&#39;rgb(255,255,255)&#39;,&#39;opacity&#39;:100},&#39;shadow&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;angle&#39;:315,&#39;distance&#39;:0,&#39;blur&#39;:5,&#39;color&#39;:&#39;rgb(0,0,0)&#39;,&#39;opacity&#39;:100},&#39;shadowPreset&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;presetNumber&#39;:0,&#39;value&#39;:{},&#39;direction&#39;:{}},&#39;reflect&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;offset&#39;:0,&#39;width&#39;:50,&#39;opacity&#39;:0},&#39;filter&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;brightness&#39;:0,&#39;contrast&#39;:0,&#39;blur&#39;:0,&#39;grayscale&#39;:0,&#39;invert&#39;:0,&#39;saturate&#39;:0,&#39;sepia&#39;:0},&#39;filterPreset&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;presetNumber&#39;:0},&#39;skew&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;horizontal&#39;:0,&#39;vertical&#39;:0},&#39;flip&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;horizontal&#39;:1,&#39;vertical&#39;:1},&#39;opacity&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;opacity&#39;:100},&#39;preset&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;presetNumber&#39;:0,&#39;divShadow&#39;:{&#39;angle&#39;:0,&#39;distance&#39;:0,&#39;blur&#39;:0,&#39;color&#39;:&#39;rgb(0,0,0)&#39;,&#39;opacity&#39;:0},&#39;divRotate&#39;:{&#39;angle&#39;:0}}}"
+              class="">
+          </div>
+        </div>
+        <div time_start="0" time_end="100" class="editable_item" id="obj_1633620298218" name="Heading" role="R016" style="position: absolute; float: left; width: 249px; height: 87px; left: 36.1902px; top: 44.7609px; padding: 0px; margin: 0px; font-size: 0px; user-select: none; z-index: 4;">
+          <div class="textWrap" style="word-break: break-word;">
+            <p><span style="font-family: OpenSansRegular; font-size:64px;">Heading</span></p>
+          </div>
+        </div>
+        <div time_start="0" time_end="100" class="editable_item" role="R001" id="obj_1633620372169" name="asphalt_dark_dawn_endless_1600185273.jpeg" style="position: absolute; float: left; width: 469.993px; height: 313.493px; left: 45.0434px; top: 286.172px; padding: 0px; margin: 0px; font-size: 0px; z-index: 5; transform: matrix3d(0.754699, -0.656073, 0, 0, 0.656073, 0.754699, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);">
+          <div class="imageWrap" style="width: 100%; height: 100%; top: 0px; left: 0px; position: absolute; box-sizing: border-box;">
+
+            <img src="../content/files/57b8ee70T0c05T11ecT981bTf1d43df5f1c3-ONll9IvoDv.jpeg" id="image_1633620372169" draggable="false" style="border: none; width: 100%; height: 100%; box-sizing: border-box; transform: scale(1, 1);" _custom="{&#39;border&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;radiusLT&#39;:0,&#39;radiusRT&#39;:0,&#39;radiusLB&#39;:0,&#39;radiusRB&#39;:0,&#39;radiusUnit&#39;:&#39;px&#39;,&#39;width&#39;:0,&#39;color&#39;:&#39;rgb(0,0,0)&#39;,&#39;padding&#39;:0,&#39;paddingColor&#39;:&#39;rgb(255,255,255)&#39;,&#39;opacity&#39;:100},&#39;shadow&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;angle&#39;:315,&#39;distance&#39;:0,&#39;blur&#39;:5,&#39;color&#39;:&#39;rgb(0,0,0)&#39;,&#39;opacity&#39;:100},&#39;shadowPreset&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;presetNumber&#39;:0,&#39;value&#39;:{},&#39;direction&#39;:{}},&#39;reflect&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;offset&#39;:0,&#39;width&#39;:50,&#39;opacity&#39;:0},&#39;filter&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;brightness&#39;:0,&#39;contrast&#39;:0,&#39;blur&#39;:0,&#39;grayscale&#39;:0,&#39;invert&#39;:0,&#39;saturate&#39;:0,&#39;sepia&#39;:0},&#39;filterPreset&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;presetNumber&#39;:0},&#39;skew&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;horizontal&#39;:0,&#39;vertical&#39;:0},&#39;flip&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;horizontal&#39;:1,&#39;vertical&#39;:1},&#39;opacity&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;opacity&#39;:100},&#39;preset&#39;:{&#39;block&#39;:0,&#39;check&#39;:0,&#39;presetNumber&#39;:0,&#39;divShadow&#39;:{&#39;angle&#39;:0,&#39;distance&#39;:0,&#39;blur&#39;:0,&#39;color&#39;:&#39;rgb(0,0,0)&#39;,&#39;opacity&#39;:0},&#39;divRotate&#39;:{&#39;angle&#39;:0}}}">
+          </div>
+        </div>
+      </layer>
+    </div>
+    <canvas id="toolDrawCanvas" style="position: absolute; z-index: -1;"></canvas>
+    <canvas id="borderCanvas" style="position: absolute; z-index: -1;"></canvas>
+    <canvas id="selectionCanvas" style="position: absolute; z-index: -1;"></canvas>
+  </div>
+
+</body>
+
+</html>

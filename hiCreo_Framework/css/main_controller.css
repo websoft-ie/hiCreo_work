@@ -1,0 +1,241 @@
+
+.mainController-playpause
+{
+	width: 2.5em; /* 40 */
+	height: 100%;
+	text-align: left;
+	cursor: pointer;
+	z-index: 2;
+	top: -2px;
+	left: 0;
+}
+.mainController-playpause:hover{opacity:0.7;}
+.mainController-time-current{text-align: left;}
+.mainController-time-duration{text-align: right;}
+.mainController-novolume .mainController-time-duration{	border-right: 0;	right: 0;}
+.mainController-bar{
+	position: relative;
+	cursor: pointer;
+	height: 4px;
+	width: 100%;
+	margin-top:22px;}
+.mainController-novolume .mainController-bar{	right: 4.375em; /* 70 */}
+.mainController-bar .mainController-bar-handle{
+	position: relative;
+	width: 16px;
+	height: 19px;
+	top: -16px;
+	margin-left: -9px;
+}
+
+.mainController-bar .mainController-bar-played
+{
+	background: #404040;
+	width: 0;
+	height: 2px;
+	position: relative;
+	top:-6px;
+}
+.mainController-bar .mainController-bar-bg{
+	height: 2px;
+	background-color: #b7b7b7;
+	width: 100%;
+	position: relative;
+	top:-4px;
+}
+/*//jw20200722 4812*/
+.mainController-bar .mainController-bar-controller{
+    position: absolute;
+	/*background: #000000;
+	opacity: 0.5;*/
+    height: 14px;
+    width: calc(100% + 20px);
+    top: -8px;
+    left: -10px;
+    z-index: 2;
+}
+.mainController-volume-button
+{
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	margin-top: 2px;
+}	
+.mainController-volume-button img{height:20px; margin-top:0;}
+.mainController-volume-button:hover{	opacity:0.7;}
+.mainController-volume
+{
+	position: absolute;
+	cursor: pointer;
+	height: 8px;
+	margin-top: 11px;
+	/*background: #000000;*/
+	width: 70px;
+}
+.mainController-volume .mainController-volume-handle{
+	position: absolute;
+  /*display: block;*/
+  width: 14px;
+  height: 16px;
+  top: -7px;
+	margin-left: -7px;
+	/*z-index: 2; //jw20200722 4812*/
+	right:-7px;
+	/*background: #000;*/
+}
+.mainController-volume .mainController-volume-handle img{width: 14px; height: 14px;}
+
+.mainController-volume .mainController-volume-adjust
+{
+	background: #404040;
+	/*z-index: 1; //jw20200722 4812*/
+	width: 100%;
+	height: 2px;
+	position: absolute;
+}
+.mainController-volume .mainController-volume-bg{
+	height: 2px; /* 14 */
+	background-color: #b7b7b7;
+	width: 100%;
+	position: absolute;
+	top:0px;
+}
+/*//jw20200722 4812*/
+.mainController-volume .mainController-volume-controller{
+	/*background: #000;
+	opacity: 0.5;*/
+    height: 14px;
+    width: calc(100% + 10px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+.mainController-fullscreen-button
+{
+	position: absolute;
+	/*left:970px;*/
+	right:250px;
+	z-index: 2;
+	cursor: pointer;
+	margin-top:18px;
+}
+
+.mainController-fullscreen-button:hover{	opacity:0.5;}
+.mainController-fullscreen-button img{	width: 21px;}
+
+.controller_block{
+	width:calc(100% - 230px);
+	display: table;
+	padding-top:3px;
+	padding-bottom:3px;
+	float: left;
+	border:none;
+}
+.fullscreen .controller_block{
+	width:100%;
+	border:1px solid #999;
+}
+
+.footer_middle {
+	display: block;
+	padding-top:3px;
+	padding-left:20px;
+	padding-right:60px;
+	text-align:center;
+  }
+
+
+.controller_cell_1 {
+    width:calc(100% - 120px);
+    box-sizing: border-box;
+	display:inline-block;
+	vertical-align:middle;
+	max-width:800px;
+}
+.controller_cell_2 {
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+    padding-top:0px;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.cell.playBtn{margin-right:20px;}
+.cell.seekBar{width:calc(100% - 80px);}
+.controller_block[responsive-case-number='4'] .cell.volumeSlider{width: 70px;}
+.naviBtn_block{margin: 10px 0px 5px 0px;display: table; position: absolute;width: 221px; right:0px;}
+
+/*.controller_block[responsive-case-number='3']============= 350px-450px */
+.controller_block[responsive-case-number='3'] .footer_middle{
+	text-align:left;
+	padding-left:10px;
+	padding-right:40px;	
+}
+.controller_block[responsive-case-number='3'] .controller_cell_1{width:calc(100% - 40px); transition:width 0.2s ease-in-out;}
+
+.controller_block[responsive-case-number='3'] .controller_cell_2{width:30px; transition:width 0.2s ease-in-out;}
+
+.controller_block[responsive-case-number='3'] .cell.volumeSlider{opacity:0; transition:opacity 0s ease-in-out; transition-delay: 0s;}
+
+.controller_block[responsive-case-number='3']:hover .controller_cell_1{width:calc(100% - 120px);}
+
+.controller_block[responsive-case-number='3']:hover .controller_cell_2{width:100px;}
+
+.controller_block[responsive-case-number='3']:hover .cell.volumeSlider{opacity:1; transition:opacity 0.2s ease-in-out; transition-delay: 0.2s;}
+
+/*.controller_block[responsive-case-number='2']============= 200px-350px */
+.controller_block[responsive-case-number='2'] .controller_cell_2.volumeWrap{
+	display:none;
+}
+.controller_block[responsive-case-number='2'] .footer_middle{
+	text-align:left;
+	padding-left:10px;
+	padding-right:40px;	
+}
+.controller_block[responsive-case-number='2'] .controller_cell_1{
+	width:100%; 
+}
+.controller_block[responsive-case-number='2'] .mainController-time-current,
+.controller_block[responsive-case-number='2'] .mainController-time-duration{font-size:11px;}
+
+/*.controller_block[responsive-case-number='1']============= 100px-200px */
+.controller_block[responsive-case-number='1'] .cell.seekBar,
+.controller_block[responsive-case-number='1'] .controller_cell_2.volumeWrap{
+	display:none;
+}
+.controller_block[responsive-case-number='1'] .footer_middle{
+	padding-left:10px;
+	padding-right:0px;
+	text-align:left;
+}
+.controller_block[responsive-case-number='1'] .cell.playBtn{
+	margin:0;
+}
+/*.controller_block[responsive-case-number='0']============= 0px-100px */
+.controller_block[responsive-case-number='0'] .cell.seekBar,
+.controller_block[responsive-case-number='0'] .controller_cell_2.volumeWrap{
+	display:none;
+}
+.controller_block[responsive-case-number='0'] .footer_middle{
+	padding-left:0;
+	padding-right:0;
+	text-align:left;
+}
+.controller_block[responsive-case-number='0'] .cell.playBtn{
+	visibility: hidden;
+	margin:0;
+}
+
+.cell {
+    box-sizing: border-box;
+    float:left;
+    border:0px solid #000;
+}
+.row {
+	width: 100%;
+    box-sizing: border-box;
+    float:left;
+    border:0px solid #000;
+}
+

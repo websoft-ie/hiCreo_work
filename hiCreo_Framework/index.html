@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta http-equiv="x-ua-compatible" content="IE=8,10,11,12">
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+  <meta name="language" content="en">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <title>hiCreo | All-in-one authoring &amp; publishing platform</title>
+
+
+  <link rel="stylesheet" href="./css/topmenu.css">
+
+  <link href="./css/index_main.89bddef89192520e31a5.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/input_style.css">
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <link rel="stylesheet" type="text/css" href="css/editor_dialogStyle.css">
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/imageeditor.js"></script>
+
+
+  <script type="text/javascript">
+    const ResizeObserver = (event) => {
+      const main = document.getElementById('main');
+
+      const _height = window.innerHeight - 200
+      main.style.height = _height + 'px'
+    }
+
+    window.addEventListener('load', ResizeObserver);
+    window.addEventListener('resize', ResizeObserver);
+
+    window.imageEditor = (obj) => {
+      console.log("🚀 ~ file: editor.html ~ line 347 ~ imageEditor ~ selected object", obj)
+        /**
+         * john 20211013
+         * There is an image inside the selected object, edit it
+         **/
+      ToolboxHandler(obj)
+    }
+
+    const ToolboxHandler = (obj) => {
+      const _id = obj.id
+      const _role = 'R001'
+      const _action = 'A010'
+      const _height = 325
+      const _width = 300
+      const _titleHtml = '<img src="images/toolbox_title_A010.svg">Image Editor'
+      const _iframeHtml = '<iframe id="toolBox" class="" style="width: 300px; height: 454px;" src="tool_box/R001_A010.html"></iframe>'
+
+      const _$toolboxDialogTag = $('<div>')
+      _$toolboxDialogTag.html(_iframeHtml)
+      _$toolboxDialogTag.dialog({
+        dialogClass: 'toolbox ' + _role + '_' + _action + ' dialogToolbox001',
+        height: 'auto',
+        width: 302,
+        padding: 0,
+        margin: 0,
+        modal: true,
+        buttons: {
+          Save: () => {},
+          'Go to Editor': () => {}
+        },
+        closeOnEscape: true,
+        resizable: false,
+        draggable: true,
+        autoResize: true,
+        autoOpen: false,
+        open: function(event, ui) {
+          iFrameDOM = $("iframe#Stage").contents()
+          toolDrawCanvas = iFrameDOM.find("#toolDrawCanvas")
+          selectionCanvas = iFrameDOM.find("#selectionCanvas")
+          borderCanvas = iFrameDOM.find("#borderCanvas")
+          toolDrawCanvas.css('z-index', 90)
+          selectionCanvas.css('z-index', 91)
+          borderCanvas.css('z-index', 91)
+
+          AfterOpenToolBox({
+            type: 'new',
+            action: _action,
+            role: _role,
+            titleHtml: _titleHtml,
+            isNew: 'new',
+            width: _width,
+            height: _height,
+            btnSave: false,
+            caller: ''
+          })
+        },
+        close: function() {
+          alert('close')
+
+          if (_action !== 'A002') {
+            $(this).dialog('destroy')
+          }
+        },
+        drag: function() {
+          $('.ui-widget-overlay').show()
+        },
+        dragStop: function() {
+
+        },
+        resize: function(event, ui) {},
+        resizeStart: function(event, ui) {
+          $('.ui-widget-overlay').show()
+        },
+        resizeStop: function(event, ui) {
+          $('.ui-widget-overlay').hide()
+        }
+      })
+
+      _$toolboxDialogTag.dialog('open')
+    }
+    const AfterOpenToolBox = (param) => {
+      const {
+        type: _type,
+        role: _role,
+        action: _action,
+        titleHtml: _titleHtml,
+        isNew: _isNew,
+        width: _width,
+        height: _height,
+        btnSave: _btnSave,
+        caller: _caller
+      } = param
+
+      const _$toolbox = $('.toolbox')
+
+      _$toolbox.css({
+        top: 100,
+        left: $(window).width() - 300
+      })
+      _$toolbox.find('.ui-dialog-title').html(_titleHtml)
+      _$toolbox.find('.ui-dialog-buttonset').empty()
+
+
+      _$toolbox.find('.ui-dialog-titlebar-close').remove()
+      $(
+          '<div class="ui-dialog-close" title="Close"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" style="padding:4px;"><path style="fill:#dddddd;" d="M8.9,7.5l6.1,6.1L13.6,15L7.5,8.9L1.4,15L0,13.6l6.1-6.1L0,1.4L1.4,0l6.1,6.1L13.6,0L15,1.4L8.9,7.5z"/></svg></div>'
+        )
+        .appendTo(_$toolbox.find('.ui-dialog-titlebar'))
+        .click(function() {
+          iFrameDOM = $("iframe#Stage").contents()
+          toolDrawCanvas = iFrameDOM.find("#toolDrawCanvas")
+          toolDrawCanvas.css('z-index', -1)
+          $("#Stage")[0].contentWindow.onFinish();
+          $('.ui-dialog').remove()
+        })
+
+      _$toolbox.css({
+        position: 'fixed'
+      })
+
+      if (_type === 'new') {
+        _$toolbox.find('.ui-dialog-content').css({
+          width: _width,
+          height: _height
+        })
+        _$toolbox.find('.toolBox #toolBox').css({
+          width: _width,
+          height: _height
+        })
+        $('.toolbox #toolBox')
+          .off('load')
+          .on('load', function(e) {
+
+          })
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div id="root">
+    <div id="left_panel" class="OverlayBlurDiv" style="height: 654px;">
+      <div class="menu">
+        <div id="tab_asset"></div>
+        <div id="tab_library" style="cursor: pointer;"></div>
+        <div id="tab_market" style="cursor: pointer;"></div>
+      </div>
+      <div class="content">
+        <button type="button" onclick="OnUpload()">Upload</button>
+        <input id="file-upload" type="file" accept="image/*" style="display: none;" />
+      </div>
+    </div>
+    <div style=""></div>
+  </div>
+
+  <div id="page-header" class="OverlayBlurDiv">
+  </div>
+
+  <div class="course_name_hover" style="left: 470px; display: none;">TEST071321</div>
+  <div class="edit_header OverlayBlurDiv" style="height: 38px;">
+
+    <div id="main" style="background: rgb(255, 255, 255); height: 614px;" class="OverlayBlurDiv">
+      <!-- <iframe id="Stage" class="Stage" src="./image_editor/index.html"></iframe> -->
+      <iframe id="Stage" class="Stage" src="./html/workspace.html"></iframe>
+    </div>
+    <div id="sidebar_panel" class="OverlayBlurDiv" style="height: 616px;">
+      <iframe id="sidebar_iframe" src="./html/sidebar.html"></iframe>
+    </div>
+
+    <div id="timeline_openBtn" style="display: none;">Timeline</div>
+    <div id="timeline_panel" class="OverlayBlurDiv open" style="height: 123px;">
+      <div id="timeline_dragbar">
+        <div class="handle"></div>
+      </div>
+      <iframe id="timeline_iframe" src="./html/timeline.html"></iframe>
+    </div>
+    <style>
+      .zoomPanel {
+        position: absolute;
+        background: #fff;
+        width: 230px;
+        padding: 10px;
+        top: -79px;
+        right: 0px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: none;
+      }
+      
+      #zoomInOutToggle {
+        background: #ffffff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        margin-top: 0px;
+        overflow: hidden;
+        transition: height 0.5s, margin-top 0.5s;
+        box-shadow: 0 2px 5px 0 RGBA(0, 0, 0, 0.8);
+      }
+      
+      .fit_block {
+        display: none;
+      }
+      
+      #zoomController {
+        position: fixed;
+      }
+      
+      .zoomToggle_img {
+        display: inline-block;
+      }
+      
+      .zoomToggle_img img {
+        width: 30px;
+        margin-top: 2px;
+        margin-left: 2px;
+      }
+      
+      .stage_zoom {
+        float: none;
+        /* display: none; */
+        margin: 7px 0 0 4px;
+        width: 20px;
+      }
+      
+      .zoomInWrap {
+        display: block;
+        vertical-align: middle;
+        width: 20px;
+        text-align: center;
+      }
+      
+      #zoom_in {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+      
+      #zoom_slider {
+        height: 60px;
+        width: 2px;
+        background: #333;
+        border: none;
+        cursor: pointer;
+        margin-left: 4px;
+        margin-right: 4px;
+        display: block;
+        vertical-align: middle;
+        display: inline-block;
+        margin-bottom: 7px;
+        margin-top: 5px;
+      }
+      
+      #zoom_slider a {
+        left: 0%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        margin-left: -4px;
+        background: #fff;
+        cursor: pointer;
+        border: 2px solid #333;
+        display: inline-block;
+      }
+      
+      #zoom_out {
+        vertical-align: middle;
+        cursor: pointer;
+        margin-bottom: 5px;
+      }
+      
+      #zoomInOutToggle .topmenu_txt_edit {
+        height: 14px;
+        line-height: 12px;
+        text-align: center;
+        width: auto;
+        margin-top: 6px !important;
+        display: inline-block !important;
+        font-size: 12px !important;
+        vertical-align: middle;
+        margin-left: -2px;
+      }
+      
+      .ori_img,
+      .fit_img {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        margin-top: 10px;
+        text-align: center;
+        line-height: 19px;
+        margin-top: 2px;
+        padding: 6px 0;
+        margin-left: 3px;
+      }
+      
+      .ori_btn[ori_toggle="yes"] .ori_img,
+      .fit_btn[fit_toggle="yes"] .fit_img {
+        background: #06f;
+      }
+      
+      .ori_btn[ori_toggle="yes"]:hover .ori_txt,
+      .fit_btn[fit_toggle="yes"]:hover .fit_txt {
+        color: #fff !important;
+      }
+      
+      .fit_btn {
+        margin-top: 2px;
+      }
+      
+      .fit_btn,
+      .ori_btn {
+        display: inline-block;
+      }
+      
+      .fit_img img {
+        width: 10px;
+        height: 10px;
+      }
+      
+      .ori_img img {
+        width: 12px;
+        height: 12px;
+      }
+      
+      .fit_txt,
+      .ori_txt {
+        display: none;
+        font-size: 10px;
+      }
+      
+      .fit_btn:hover .fitImg {
+        display: none;
+      }
+      
+      .ori_btn:hover .oriImg {
+        display: none;
+      }
+      
+      .fit_btn:hover .fit_txt,
+      .ori_btn:hover .ori_txt {
+        display: block;
+      }
+      
+      .zoomToolTip {
+        position: absolute;
+        background: #fff;
+        width: 90px;
+        padding: 5px;
+        border-radius: 5px;
+        line-height: 14px;
+        border: 1px solid #aaa;
+        text-align: center;
+        color: #23527c;
+        display: none;
+      }
+      
+      .zoomToolTip .zoomHotkey {
+        font-size: 12px;
+        color: #666;
+      }
+      
+      .zoomToolTipArrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid #aaa;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        margin-top: -27px;
+        margin-left: 83px;
+      }
+      
+      .zoomToolTipArrowInner {
+        width: 0;
+        height: 0;
+        border-left: 5px solid #fff;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        margin-top: -5px;
+        margin-left: -7px;
+      }
+      
+      .zoomOutToolTip {
+        margin-left: -110px;
+        margin-top: -20px;
+      }
+      
+      .zoomInToolTip {
+        margin-left: -107px;
+        margin-top: -20px;
+      }
+      
+      .zoomFitToolTip {
+        margin-left: -98px;
+        margin-top: -29px;
+      }
+      
+      .zoom100ToolTip {
+        margin-left: -98px;
+        margin-top: -29px;
+      }
+      
+      #zoom_in:hover .zoomOutToolTip,
+      #zoom_out:hover .zoomInToolTip,
+      .fit_btn:hover .zoomFitToolTip,
+      .ori_btn:hover .zoom100ToolTip {
+        display: block;
+      }
+    </style>
+
+    <div id="zoomController" class="zoom_block OverlayBlurDiv" style="right: 254px; bottom: 150px;">
+      <div id="zoomInOutToggle" class="zoomToggle_btn">
+        <div class="zoomToggle_img">
+          <img src="./images/topmenu_zoom.svg" onmousedown="return false">
+        </div>
+        <div class="stage_zoom">
+          <div class="topmenu_txt_edit" style="display: none;">85%</div>
+          <div class="zoomInWrap">
+            <a id="zoom_out">
+              <img width="14" height="14" src="./images/timeline_zoom_out.svg">
+              <div class="zoomToolTip zoomInToolTip">
+                Zoom-In<br>
+                <font class="zoomHotkey">Ctrl + +</font>
+                <div class="zoomToolTipArrow">
+                  <div class="zoomToolTipArrowInner">
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div id="zoom_slider" class="ui-slider ui-slider-vertical ui-corner-all ui-widget ui-widget-content">
+              <a href="https://editor.hicreo.com/authoring/?course_id=79NmW9gG438y0FmV21ad&amp;project_type=1#" class="ui-slider-handle ui-state-default ui-corner-all zoom_slider_handle" tabindex="0" style="bottom: 7.57576%;">
+
+              </a>
+            </div>
+            <a id="zoom_in">
+              <img width="14" height="14" src="./images/timeline_zoom_in.svg">
+              <div class="zoomToolTip zoomOutToolTip">
+                Zoom-Out
+                <font class="zoomHotkey">Ctrl + -</font>
+                <div class="zoomToolTipArrow">
+                  <div class="zoomToolTipArrowInner">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="fit_block" ori_toggle="no" fit_toggle="no" onmousedown="return false">
+          <div class="fit_btn" fit_toggle="no">
+            <div class="fit_img">
+              <img class="fitImg" src="./images/topmenu_fit.svg" onmousedown="return false" style="margin-top:-2px;">
+              <div class="fit_txt" style="color: rgb(51, 51, 51);">
+                Fit
+              </div>
+            </div>
+            <div class="zoomToolTip zoomFitToolTip">
+              Fit to Screen<br>
+              <font class="zoomHotkey">Ctrl + 0</font>
+              <div class="zoomToolTipArrow">
+                <div class="zoomToolTipArrowInner">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ori_btn" ori_toggle="no">
+            <div class="ori_img">
+              <img class="oriImg" src="./images/topmenu_ori.svg" onmousedown="return false" style="margin-top:-2px;">
+              <div class="ori_txt" style="color: rgb(0, 0, 0);">
+                100%
+              </div>
+            </div>
+            <div class="zoomToolTip zoom100ToolTip">
+              100%<br>
+              <font class="zoomHotkey">Ctrl + 1</font>
+              <div class="zoomToolTipArrow">
+                <div class="zoomToolTipArrowInner">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    inputElement = document.getElementById("file-upload");
+    inputElement.addEventListener("change", function() {
+      imgChange(this)
+    }, false);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+.ui-widget {
+  font-family: 'Open Sans', Sans-Serif;
+}
+
+#left_panel {
+  position: absolute;
+  width: 205px;
+  top: 50px;
+  left: 0px;
+  border-right: 1px solid #aaa;
+}
+
+#sidebar_panel {
+  position: fixed;
+  width: 230px;
+  height: 100%;
+  top: 88px;
+  right: 0;
+  border: 0px solid #000000;
+  background: #fff;
+  z-index: 1;
+  border-left: 1px solid #aaa;
+}
+
+#main {
+  position: fixed;
+  width: calc(100% - 435px);
+  height: calc(100% - 90px);
+  top: 88px;
+  right: 0;
+  left: 205px;
+  border: 0px solid #000000;
+}
+
+#sidebar_iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: none;
+}
+
+#timeline_panel {
+  position: fixed;
+  width: 100%;
+  height: 0px;
+  bottom: 0px;
+  right: auto;
+  left: 0px;
+  border: 0px solid #000000;
+  background: #aaa;
+  z-index: 100;
+}
+
+#timeline_iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: none;
+}
+
+#timeline_dragbar {
+  background-color: #d3d3d3;
+  width: 100%;
+  height: 5px;
+  cursor: row-resize;
+}
+
+#timeline_dragbar:hover {
+  background-color: #1883d7;
+}
+#timeline_dragbar .handle {
+  background-color: #1883d7;
+  width: 100%;
+  height: 7px;
+  margin-top: -2px;
+  z-index: 2;
+  position: absolute;
+  display: none;
+}
+
+#timeline_dragbar:hover .handle {
+  display: block;
+}
+#timeline_panel_ghostbar {
+  width: 100%;
+  height: 1px;
+  background-color: #1883d7;
+  opacity: 0.5;
+  position: absolute;
+  cursor: row-resize;
+  z-index: 9101;
+}
+
+#timeline_panel_ghostbg {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  z-index: 9100;
+}
+
+.Stage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border: none;
+}
+
+#left_panel .menu {
+  display: table;
+  width: 100%;
+}
+
+#left_panel .content {
+  width: 100%;
+  height: calc(100% - 37px);
+  padding: 5px;
+}
+
+#left_panel .menu #tab_library {
+  width: 33%;
+  height: 37px;
+  cursor: pointer;
+  float: left;
+  background-color: #666;
+  background-image: url('../images/topmenu_sub_library.svg');
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  color: #fff;
+}
+
+#left_panel .menu #tab_market {
+  width: 33%;
+  height: 37px;
+  cursor: pointer;
+  float: left;
+  background-color: #444;
+  
+  background-image: url('../images/000_tab_stock_w.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  color: #fff;
+}
+
+#left_panel .menu #tab_market:hover {
+  line-height: 12px;
+  font-size: 12px;
+  padding: 6px;
+}
+#left_panel .menu #tab_market:hover:before {
+  content: 'Stock Asset';
+}
+
+#left_panel .menu #tab_asset {
+  width: 34%;
+  height: 37px;
+  float: left;
+  background-image: url('../images/topmenu_sub_contentblock.svg');
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: center;
+}
+
+.collaboration-no-editing-perm #left_panel #panel_contentBlocks .contentBlocks-text,
+.collaboration-no-editing-perm #left_panel .menu #tab_asset {
+  opacity: 0.4;
+}
+
+.collaboration-no-editing-perm #left_panel .menu #tab_library:hover,
+#left_panel .menu #tab_library.disabled:hover {
+  width: 33%;
+  height: 37px;
+  background-color: #666;
+  background-image: url('../images/topmenu_sub_library.svg');
+}
+
+.collaboration-no-editing-perm #left_panel .menu #tab_library,
+.collaboration-no-editing-perm #left_panel .menu #tab_market {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.collaboration-no-editing-perm #left_panel .menu #tab_market:hover,
+#left_panel .menu #tab_market.disabled:hover {
+  width: 33%;
+  height: 37px;
+  background-color: #444;
+  background-image: url('../images/topmenu_sub_market.svg');
+}
+
+#left_panel .menu #tab_library:hover,
+#left_panel .menu #tab_market:hover {
+  background-image: none;
+  background-color: #555;
+}
+
+#left_panel .menu #tab_library:hover:before {
+  content: 'Library';
+}
+
+.ui-dialog {
+    z-index: 9001;
+    box-shadow: 0 3px 6px 1px RGBA(0, 0, 0, 0.8);
+	background-color: #ffffff;
+}

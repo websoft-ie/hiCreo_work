@@ -1,0 +1,475 @@
+/* ============================================================
+  COMMON
+============================================================ */
+html,
+body {
+  user-select: none;
+}
+
+/*input[type="text"] {*/
+  /*display: block;*/
+/*  margin: 0;*/
+/*  width: 100%;*/
+/*  font-family: "Open Sans", sans-serif;*/
+/*  font-size: 18px;*/
+/*  -webkit-appearance: none;*/
+/*  -moz-appearance: none;*/
+/*  appearance: none;*/
+/*  -webkit-box-shadow: none;*/
+/*  -moz-box-shadow: none;*/
+/*  box-shadow: none;*/
+/*  -webkit-border-radius: none;*/
+/*  -moz-border-radius: none;*/
+/*  -ms-border-radius: none;*/
+/*  -o-border-radius: none;*/
+/*  border-radius: none;*/
+/*}*/
+/*input[type="text"]:focus {*/
+/*  outline: none;*/
+/*}*/
+
+/* lists */
+/*ul.input-list {*/
+/*  list-style: none;*/
+/*  margin: 0 -10px;*/
+/*  padding: 0;*/
+/*}*/
+/*ul.input-list li {*/
+/*  display: block;*/
+/*  padding: 0 10px;*/
+/*  width: 50%;*/
+/*  float: left;*/
+/*}*/
+
+/*@media all and (max-width: 800px) {*/
+/*  ul.input-list {*/
+/*    margin: 0;*/
+/*  }*/
+/*  ul.input-list li {*/
+/*    padding: 0;*/
+/*    width: 100%;*/
+/*    float: none;*/
+/*    margin-bottom: 10px;*/
+/*  }*/
+/*}*/
+/* ============================================================
+  STYLE 1
+============================================================ */
+/*.style-1 input[type="text"] {*/
+/*  padding: 10px;*/
+/*  border: solid 1px gainsboro;*/
+/*  -webkit-transition: box-shadow 0.3s, border 0.3s;*/
+/*  -moz-transition: box-shadow 0.3s, border 0.3s;*/
+/*  -o-transition: box-shadow 0.3s, border 0.3s;*/
+/*  transition: box-shadow 0.3s, border 0.3s;*/
+/*}*/
+/*.style-1 input[type="text"]:focus, .style-1 input[type="text"].focus {*/
+/*  border: solid 1px #707070;*/
+/*  -webkit-box-shadow: 0 0 5px 1px #969696;*/
+/*  -moz-box-shadow: 0 0 5px 1px #969696;*/
+/*  box-shadow: 0 0 5px 1px #969696;*/
+/*}*/
+
+/* ============================================================
+  STYLE 2
+============================================================ */
+/*.style-2 input[type="text"] {*/
+/*  padding: 10px;*/
+/*  border: solid 5px #c9c9c9;*/
+/*  -webkit-transition: border 0.3s;*/
+/*  -moz-transition: border 0.3s;*/
+/*  -o-transition: border 0.3s;*/
+/*  transition: border 0.3s;*/
+/*}*/
+/*.style-2 input[type="text"]:focus, .style-2 input[type="text"].focus {*/
+/*  border: solid 5px #969696;*/
+/*}*/
+
+/* ============================================================
+  STYLE 3
+============================================================ */
+/*.style-3 input[type="text"] {*/
+/*  padding: 10px;*/
+/*  border: solid 5px #c9c9c9;*/
+/*  -webkit-box-shadow: inset 0 0 0 1px #707070;*/
+/*  -moz-box-shadow: inset 0 0 0 1px #707070;*/
+/*  box-shadow: inset 0 0 0 1px #707070;*/
+/*  -webkit-transition: box-shadow 0.3s, border 0.3s;*/
+/*  -moz-transition: box-shadow 0.3s, border 0.3s;*/
+/*  -o-transition: box-shadow 0.3s, border 0.3s;*/
+/*  transition: box-shadow 0.3s, border 0.3s;*/
+/*}*/
+/*.style-3 input[type="text"]:focus, .style-3 input[type="text"].focus {*/
+/*  border: solid 5px #969696;*/
+/*}*/
+
+/* ============================================================
+  STYLE 4
+============================================================ */
+/*.style-4 input[type="text"] {*/
+/*  padding: 10px;*/
+/*  border: none;*/
+/*  border-bottom: solid 2px #c9c9c9;*/
+/*  -webkit-transition: border 0.3s;*/
+/*  -moz-transition: border 0.3s;*/
+/*  -o-transition: border 0.3s;*/
+/*  transition: border 0.3s;*/
+/*}*/
+/*.style-4 input[type="text"]:focus, .style-4 input[type="text"].focus {*/
+/*  border-bottom: solid 2px #969696;*/
+/*}*/
+
+/* ============================================================
+  STYLE 5
+============================================================ */
+/*.style-5 input[type="text"] {*/
+/*  padding: 10px;*/
+/*  border: solid 1px #fff;*/
+/*  -webkit-box-shadow: inset 1px 1px 2px 0 #707070;*/
+/*  -moz-box-shadow: inset 1px 1px 2px 0 #707070;*/
+/*  box-shadow: inset 1px 1px 2px 0 #707070;*/
+/*  -webkit-transition: box-shadow 0.3s;*/
+/*  -moz-transition: box-shadow 0.3s;*/
+/*  -o-transition: box-shadow 0.3s;*/
+/*  transition: box-shadow 0.3s;*/
+/*}*/
+/*.style-5 input[type="text"]:focus, .style-5 input[type="text"].focus {*/
+/*  -webkit-box-shadow: inset 1px 1px 2px 0 #c9c9c9;*/
+/*  -moz-box-shadow: inset 1px 1px 2px 0 #c9c9c9;*/
+/*  box-shadow: inset 1px 1px 2px 0 #c9c9c9;*/
+/*}*/
+
+/* ============================================================
+  checkbox STYLE 
+============================================================ */
+/*input[type=checkbox].css-checkbox {*/
+/*  position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;*/
+/*}*/
+
+/*input[type=checkbox].css-checkbox + label.css-label {*/
+/*  padding-left:37px;*/
+/*  height:32px; */
+/*  display:inline-block;*/
+/*  line-height:30px;*/
+/*  background-repeat:no-repeat;*/
+/*  background-position: 0 0;*/
+/*  font-size:16px;*/
+/*  vertical-align:middle;*/
+/*  cursor:pointer;*/
+
+/*}*/
+
+/*input[type=checkbox].css-checkbox:checked + label.css-label {*/
+/*  background-position: 0 -32px;*/
+/*}*/
+/*label.css-label {*/
+/*background-image:url(/authoring/images/checkbox.png);*/
+/*-webkit-touch-callout: none;*/
+/*-webkit-user-select: none;*/
+/*-khtml-user-select: none;*/
+/*-moz-user-select: none;*/
+/*-ms-user-select: none;*/
+/*user-select: none;*/
+/*}*/
+
+/* ============================================================
+  Button STYLE
+============================================================ */
+/*input[type=button].css-button{*/
+/*  height:32px; */
+/*  display:inline-block;*/
+/*  line-height:30px;*/
+/*  background-repeat:no-repeat;*/
+/*  background-position: 0 0;*/
+/*  font-size:16px;*/
+/*  vertical-align:middle;*/
+/*  cursor:pointer;*/
+
+/*}*/
+/* ============================================================
+  textarea STYLE
+============================================================ */
+/*textarea.css-textarea {*/
+/*  width: 600px;*/
+/*  height: 50px;*/
+/*  border: 3px solid #cccccc;*/
+/*  padding: 5px;*/
+/*  overflow:auto;*/
+/*  font-family: 'Open Sans', sans-serif;*/
+/*  background-image: url(bg.gif);*/
+/*  background-position: bottom right;*/
+/*  background-repeat: no-repeat;*/
+/*}*/
+/*textarea.css-textarea2 {*/
+/*  width: 580px;*/
+/*  height: 35px;*/
+/*  border: 3px solid #cccccc;*/
+/*  padding: 5px;*/
+/*  overflow:auto;*/
+/*  font-family:'Open Sans', sans-serif;*/
+/*  background-image: url(bg.gif);*/
+/*  background-position: bottom right;*/
+/*  background-repeat: no-repeat;*/
+/*}*/
+
+/*=================================================082119_SK Input Style============================================================*/
+#course_title:focus,/*projectBuilder title_SK*/
+input:focus, .ui-select-trigger.active,
+textarea{outline: none !important;}
+
+#main input[type="number"], #main input[type="text"],
+#toolboxProperties input[type="number"], #toolboxProperties input[type="text"],
+#toolboxImageEditor input[type="number"], #toolboxImageEditor input[type="text"],
+#audioEditor input[type="number"], #audioEditor input[type="text"],
+#toolboxStreamVideo input[type="number"], #toolboxStreamVideo input[type="text"],
+#toolboxGraphEditor input[type="number"], #toolboxGraphEditor input[type="text"],
+#toolboxIconMotion  input[type="number"], #toolboxIconMotion input[type="text"],
+#shape_editor input[type="number"], #shape_editor input[type="text"],
+#lineEditor input[type="number"], #lineEditor input[type="text"]{
+  border:1px dashed #aaa; 
+  text-align: right; 
+  font-family: 'Open Sans',Sans-Serif; 
+  font-size: 12px;
+  -moz-appearance: textfield;
+  box-shadow:none;
+}
+
+
+input[type="text"]#filename{border:1px dashed #aaa; font-family: 'Open Sans',Sans-Serif; font-size: 12px; border-radius:0; text-align:left;}/*Audio Editor/Save Dialog*/
+input[type="text"]#filetype{border:1px dashed #aaa; font-family: 'Open Sans',Sans-Serif; font-size: 12px; border-radius:0; text-align:left;}/*Audio Editor/Save Dialog*/
+
+input[type="number"].toolboxValue{font-size:12px; text-align:right;}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;    
+}
+input, textarea, select, .ui-select-trigger{border:1px dashed #aaa;}
+
+/*4557 custom input css 05262020_SK*/
+
+/*************Check Box*************/
+      .inputStyleCheckbox[type="checkbox"] {
+			      position: relative;
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+				    border:0;
+			      width: 12px;
+			      height:12px;
+			      margin:0px;
+			      font-size: 25px;
+			      outline: none;
+			      font-family: 'font-awesome';
+			      transition: 300ms ease-out;
+			      cursor:pointer;
+			      color:#666666;
+			      vertical-align:middle;
+			}
+			
+			.inputStyleCheckbox[type="checkbox"]::after {
+				content: '';
+				display: inline-block;
+				text-align: center;
+				width: 12px;
+				height: 12px;
+				font-size: 10px;
+				border: 1px solid #666;
+				border-radius: 2px;
+				position: absolute;
+				background-color: #fff;
+				box-sizing:border-box;
+				
+			}
+			.inputStyleCheckbox[type="checkbox"]:checked::after{
+			      font-weight: 100;
+			}
+			.inputStyleCheckbox[type="checkbox"]:active{
+			      transform: scale(0.6);
+			}
+
+			.inputStyleCheckbox[type="checkbox"]:checked::after {
+				content: '\f00c';
+				color: #fff;
+				background-color: #666;
+			}
+
+			 .inputStyleCheckbox[type="range"] {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      outline: none;
+			      display: block;
+			      padding: 0;
+			      border: 0;
+			      width: auto;
+			      height: 0.25em;
+			      border-radius: 1em;
+			      cursor: pointer;
+			      font-size: inherit;
+			}
+			 .inputStyleCheckbox[type="range"]::-moz-range-track {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      background: #fff;
+			      outline: none;
+			}
+			 .inputStyleCheckbox[type="range"]::-moz-focus-outer {
+			      border: 0;
+			}
+			 .inputStyleCheckbox[type="range"]::-moz-range-thumb {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      width: 1em;
+			      height: 1em;
+			      border: none;
+			      box-shadow: 0 0 0 0.2em #1fc2f5;
+			      border-radius: 1em;
+			      background: #fff;
+			      transform: scale(0.7);
+			      transition: 0.3s ease-out;
+			}
+			 .inputStyleCheckbox[type="range"]::-moz-range-thumb:focus,  .checkboxWrap .inputStyleCheckbox[type="range"]::-moz-range-thumb:active {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      transform: scale(1.5);
+			}
+			 .inputStyleCheckbox[type="range"]::-webkit-slider-thumb {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      width: 1em;
+			      height: 1em;
+			      border: none;
+			      box-shadow: 0 0 0 0.2em #1fc2f5;
+			      border-radius: 1em;
+			      background: #fff;
+			      transform: scale(0.8);
+			      transition: 0.3s ease-out;
+			}
+			 .inputStyleCheckbox[type="range"]::-webkit-slider-thumb:focus,  .checkboxWrap .inputStyleCheckbox[type="range"]::-webkit-slider-thumb:active {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      transform: scale(1.2);
+			}
+			
+			.inputStyleCheckbox:disabled{opacity:0.4; cursor:default;}
+			
+/*************Radio Button*************/
+
+  		    .inputStyleRadio[type="radio"] {
+			      position: relative;
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+				  border:0;
+			      width: 12px;
+			      height:12px;
+			      margin: 0 2px;
+			      font-size: 25px;
+			      outline: none;
+			      font-family: 'font-awesome';
+			      transition: 300ms ease-out;
+			      cursor:pointer;
+			      color:#666666;
+			}
+			.inputStyleRadio[type="radio"]::after {
+				content: '';
+				display: inline-block;
+				text-align: center;
+				width: 12px;
+				height: 12px;
+				font-size: 6px;
+				border: 1px solid #aaa;
+				border-radius: 50%;
+				position: absolute;
+				background: #fff;
+				box-sizing:border-box;
+				line-height:11px;
+			}
+			.inputStyleRadio[type="radio"]:checked::after{
+			      font-weight: 100;
+			}
+      .inputStyleRadio[type="radio"]:active{
+        transform: scale(0.6);
+      }
+      .inputStyleRadio[type="radio"][disabled]:active{
+        transform: initial;
+      }
+
+			.inputStyleRadio[type="radio"]:checked::after {
+				/*content: '\f111';*/
+				/*color: #fff;*/
+				/*background-color: rgba(102, 102, 102, 0.7);*/
+				background-color:#fff;
+				border:3px solid #aaa;
+			}
+
+			 .inputStyleRadio[type="range"] {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      outline: none;
+			      display: block;
+			      padding: 0;
+			      border: 0;
+			      width: auto;
+			      height: 0.25em;
+			      border-radius: 1em;
+			      cursor: pointer;
+			      font-size: inherit;
+			}
+			 .inputStyleRadio[type="range"]::-moz-range-track {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      background: #fff;
+			      outline: none;
+			}
+			 .inputStyleRadio[type="range"]::-moz-focus-outer {
+			      border: 0;
+			}
+			 .inputStyleRadio[type="range"]::-moz-range-thumb {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      width: 1em;
+			      height: 1em;
+			      border: none;
+			      box-shadow: 0 0 0 0.2em #1fc2f5;
+			      border-radius: 1em;
+			      background: #fff;
+			      transform: scale(0.7);
+			      transition: 0.3s ease-out;
+			}
+			 .inputStyleRadio[type="range"]::-moz-range-thumb:focus,  .checkboxWrap .inputStyleCheckbox[type="range"]::-moz-range-thumb:active {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      transform: scale(1.5);
+			}
+			 .inputStyleRadio[type="range"]::-webkit-slider-thumb {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      width: 1em;
+			      height: 1em;
+			      border: none;
+			      box-shadow: 0 0 0 0.2em #1fc2f5;
+			      border-radius: 1em;
+			      background: #fff;
+			      transform: scale(0.8);
+			      transition: 0.3s ease-out;
+			}
+			 .inputStyleRadio[type="range"]::-webkit-slider-thumb:focus,  .checkboxWrap .inputStyleCheckbox[type="range"]::-webkit-slider-thumb:active {
+				   -webkit-appearance: none;
+				   -moz-appearance:    none;
+				   appearance:         none;
+			      transform: scale(1.2);
+			}
